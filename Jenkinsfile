@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creation')
-        IMAGE_NAME = 'dipeshagarwal/nodejs_exam_img'  // Your Docker Hub repo name
+        DOCKERHUB_CREDENTIALS = credentials('jenkin')
+        IMAGE_NAME = 'raghav984/nodejs_exam_img'  // Your Docker Hub repo name
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/dipeshagarwaaal/Node_App.git'
+                git branch: 'main', url: 'https://github.com/Raghav7976/Node_App.git'
             }
         }
 
